@@ -9,7 +9,7 @@ ul {
 }
 
 .dappertext {
-  margin-left: 3rem;
+  margin-left: 30%;
   font-family: "Delius Unicase", cursive;
   font-size: 2rem;
 }
@@ -28,7 +28,6 @@ ul {
 .links {
   display: flex;
   align-items: center;
-  margin: 1rem;
 }
 
 .nav-list {
@@ -70,7 +69,7 @@ ul {
 }
 
 .computer-image {
-  width: 62%;
+  width: 72%;
   height: 62%;
 }
 
@@ -80,6 +79,8 @@ ul {
   width: 85%;
   font-size: 18px;
   height: 60%;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .section2 {
@@ -116,4 +117,67 @@ ul {
   border-radius: 10px;
   width: 16rem;
   height: 6rem;
+}
+
+.section3 {
+  background-color: #483eff;
+  margin: 6rem;
+  display: flex;
+  border-radius: 1rem;
+}
+
+.info-box {
+  display: flex;
+  background-color: white;
+  margin: 2rem;
+  padding: 2rem;
+  flex-direction: column;
+  border-radius: 1rem;
+  width: 60%;
+}
+
+.items {
+  display: flex;
+  font-size: 20px;
+  color: white;
+  margin: 3rem;
+  border-radius: 1rem;
+  border: 4px solid white;
+  width: 16rem;
+  height: 6rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.type-info-items {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.info {
+  margin-bottom: 1rem;
+}
+
+#list-item-1 {
+  background-color: #bce0f6;
+  color: #000000;
+  border: none;
+}
+
+.container-info {
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.next-btn {
+  background-color: #282828;
+  border: none;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-left: 45rem;
 }
