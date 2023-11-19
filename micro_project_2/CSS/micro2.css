@@ -9,39 +9,111 @@ ul {
 }
 
 .dappertext {
+  margin-left: 3rem;
   font-family: "Delius Unicase", cursive;
+  font-size: 2rem;
 }
 .navbar {
   display: flex;
-  font-size: 20px;
-  width: 100%;
-  padding: 1%;
   background-color: #6f6af7;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  color: white;
+}
+
+.search-menu {
+  display: flex;
 }
 
 .links {
   display: flex;
   align-items: center;
+  margin: 1rem;
 }
 
 .nav-list {
+  font-size: 20px;
   padding: 0px 20px;
 }
 
 .menuicon {
-  max-width: 3vw;
-  max-height: 3vh;
+  margin-right: 4rem;
+  max-width: 2rem;
+  max-height: 2rem;
 }
 
 .formsearch {
   display: flex;
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
-input{
-  padding: 8px;
+.inside-search {
+  padding: 10px;
   border: none;
   border-radius: 20px;
+}
+
+.section1 {
+  display: flex;
+  padding: 3%;
+  margin-bottom: -10%;
+}
+
+.leftsect1 {
+  flex: 40%;
+  margin-left: 2rem;
+}
+
+.rightsect1 {
+  flex: 60%;
+  margin-left: -12%;
+}
+
+.computer-image {
+  width: 62%;
+  height: 62%;
+}
+
+.big-textbox {
+  background-color: #e5d8ff;
+  border-radius: 20px;
+  width: 85%;
+  font-size: 18px;
+  height: 60%;
+}
+
+.section2 {
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+  font-size: 22px;
+}
+
+.box1 {
+  display: flex;
+  background-color: #929dff;
+  border-radius: 10px;
+  width: 16rem;
+  height: 6rem;
+}
+
+.box2 {
+  background-color: #734cf2;
+  border-radius: 10px;
+  width: 16rem;
+  height: 6rem;
+}
+
+.box3 {
+  background-color: #d288ff;
+  border-radius: 10px;
+  width: 16rem;
+  height: 6rem;
+}
+
+.box4 {
+  background-color: #000000;
+  border-radius: 10px;
+  width: 16rem;
+  height: 6rem;
 }
