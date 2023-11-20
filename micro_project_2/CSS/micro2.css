@@ -181,3 +181,10 @@ ul {
   border-radius: 10px;
   margin-left: 45rem;
 }
+
+.search-btn {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  font-size: 17px;
+}
