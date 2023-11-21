@@ -8,7 +8,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Dapper</title>
   </head>
 
@@ -24,14 +27,12 @@
           <li class="nav-list">Information</li>
           <li class="nav-list">More</li>
         </ul>
-        <div class="search-menu">
-          <form class="formsearch">
-            <input
-              class="inside-search"
-              type="search"
-              placeholder="Search..."
-            />
-            <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+        <div class="search-container">
+          <input class="inside-search" type="search" placeholder="Search..." />
+          <button class="search-btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
           </form>
           <img class="menuicon" src="./static/menu.svg" alt="" />
         </div>
@@ -102,19 +103,31 @@
           <button class="next-btn">Next</button>
         </div>
       </div>
+      <div>
+        <div class="socials-container">
+          <ul class="socials">
+            <li>
+              <img
+                class="whatsapp"
+                src="./static/socials/whatsapp.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                class="facebook"
+                src="./static/socials/facebook.png"
+                alt=""
+              />
+            </li>
+            <li>
+              <img class="twitter" src="./static/socials/twitter.png" alt="" />
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      <ul class="socials">
-        <li>
-          <img class="whatsapp" src="./static/socials/whatsapp.png" alt="">
-        </li>
-        <li>
-          <img class="facebook" src="./static/socials/facebook.png" alt="">
-        </li>
-        <li>
-          <img class="twitter" src="./static/socials/twitter.png" alt="">
-        </li>
-      </ul>
-      <img src="./static/chatbot.png" class="chat-bot" alt="">
+      <img src="./static/chatbot.png" class="chat-bot" alt="" />
     </div>
     <script src="./JS/micro2.js"></script>
   </body>
