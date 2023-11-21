@@ -19,6 +19,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   color: white;
+  margin-bottom: 2%;
 }
 
 .search-menu {
@@ -190,20 +191,29 @@ ul {
 }
 
 .socials {
-  position: sticky;
-  top: 25%;
-  right: 0;
   list-style: none;
-  padding-left: 0;
-  margin: 0;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
+  position: sticky;
+  top: 35%;
   flex-direction: column;
-  transition: top 0.3s ease; 
+  float: right;
 }
 
-.socials li {
-  margin-bottom: 10px;
+.whatsapp {
+  width: 75%;
+}
+
+.facebook {
+  width: 75%;
+}
+
+.twitter {
+  width: 75%;
+}
+
+.chat-bot {
+  position: fixed;
+  bottom: 1rem;
+  right: 4rem;
+  width: 125px;
 }
