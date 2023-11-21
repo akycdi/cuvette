@@ -188,3 +188,22 @@ ul {
   padding: 10px;
   font-size: 17px;
 }
+
+.socials {
+  position: sticky;
+  top: 25%;
+  right: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  transition: top 0.3s ease; 
+}
+
+.socials li {
+  margin-bottom: 10px;
+}
