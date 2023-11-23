@@ -210,18 +210,12 @@ ul {
 
 /* socilas-styles */
 
-.socials-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-
 .socials {
   list-style: none;
+  position: sticky;
   display: flex;
+  float: right;
+  top: 0;
   flex-direction: column;
 }
 
@@ -235,3 +229,4 @@ ul {
   right: 4rem;
   width: 125px;
 }
+
