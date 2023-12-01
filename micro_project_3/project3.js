@@ -74,6 +74,37 @@ function getAllNuts(jsondata) {
   });
   return getNuts;
 }
+
+function getCalories(jsondata, type) {
+  var calories = [];
+  if (type === "Above") {
+    jsondata.forEach((e) => {
+      if (e.calorie >= 100) {
+        calories.push([e.foodname, e.id]);
+      }
+    });
+  } else {
+    jsondata.forEach((e) => {
+      if (e.calorie <= 100) {
+        calories.push([e.foodname, e.id]);
+      }
+    });
+  }
+  return calories;
+}
+
+function getProtinesSorted(jsondata) {
+  var proteinItems = jsondata.filter((item) => item.category === "Protein");
+  var sortedProteinItems = proteinItems.sort((a, b) => b.protein - a.protein);
+  var result = sortedProteinItems.map((item) => [item.foodname, item.id]);
+  return result;
+}
+
+function getCarbsSorted(jsondata) {
+  var sortedItems = jsondata.sort((a, b) => a.carbs - b.carbs);
+  var result = sortedItems.map((item) => [item.foodname, item.id]);
+  return result;
+}
 function runner() {
   var ans;
   //   ans = getAllFoodItems(data);
@@ -82,7 +113,12 @@ function runner() {
   // ans = getAllProtine(data);
   // ans = getAllNuts(data);
   // ans = getAllGrains(data);
-  
+
+  // ans = getCalories(data,"Above");
+  // ans = getCalories(data,"Below");
+
+  // ans = getProtinesSorted(data);
+  ans = getCarbsSorted(data);
 
   ans.forEach((element) => {
     console.log(element);
