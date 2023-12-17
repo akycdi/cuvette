@@ -1,4 +1,3 @@
-
 //Main Code
 let winners = {
   humanWin: 0,
@@ -8,8 +7,11 @@ let winners = {
 
 function pageRunner() {
   if (localStorage.getItem("computerWins")) {
-    winners.humanWin = localStorage.getItem("humanWins");
-    winners.computerWin = localStorage.getItem("computerWins");
+    winners.humanWin = parseInt(localStorage.getItem("humanWins"));
+    winners.computerWin = parseInt(localStorage.getItem("computerWins"));
+  } else {
+    localStorage.setItem("humanWins", winners.humanWin);
+    localStorage.setItem("computerWins", winners.computerWin);
   }
   refreshScore();
 }
@@ -86,8 +88,5 @@ function refreshScore() {
   document.getElementById("computerScore").innerText =
     localStorage.getItem("computerWins");
 }
-
-
-
 
 window.onload = pageRunner();

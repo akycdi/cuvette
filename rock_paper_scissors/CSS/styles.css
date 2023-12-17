@@ -83,3 +83,30 @@
   font-size: 4rem;
   color: black;
 }
+
+.rockBtn,
+.paperBtn,
+.scissorBtn {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 0.8rem solid; /* Outer */
+  background-color: white; /* Inner */
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rockBtn {
+  border-color: #0074b6;
+}
+
+.scissorBtn {
+  border-color: #bd00ff;
+}
+
+.paperBtn {
+  border-color: #ffa943;
+}
