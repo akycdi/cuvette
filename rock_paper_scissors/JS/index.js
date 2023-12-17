@@ -1,3 +1,5 @@
+
+//Main Code
 let winners = {
   humanWin: 0,
   computerWin: 0,
@@ -84,5 +86,8 @@ function refreshScore() {
   document.getElementById("computerScore").innerText =
     localStorage.getItem("computerWins");
 }
+
+
+
 
 window.onload = pageRunner();

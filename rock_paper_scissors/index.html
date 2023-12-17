@@ -5,14 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="./CSS/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="container">
+      <div class="scorcard">
+        <div class="textScoreCard">
+          <span>ROCK</span>
+          <span>PAPER</span>
+          <span>SCISSORS</span>
+        </div>
+        <div class="scoreDisplay">
+          <div class="computerContainer">
+            <span>COMPUTER</span>
+            <span>SCORE</span>
+            <span id="computerScore"></span>
+          </div>
+          <div class="humanContainer">
+            <span>YOUR</span>
+            <span>SCORE</span>
+            <span id="humanScore"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <button onclick="btnClickRock()">Rock</button>
     <button onclick="btnClickPaper()">Paper</button>
     <button onclick="btnClickScissor()">Scissor</button>
-
-    <h2>Human Score:<span id="humanScore"></span></h2>
-    <h2>Computer Score: <span id="computerScore"></span></h2>
 
     <script src="./JS/index.js"></script>
   </body>
