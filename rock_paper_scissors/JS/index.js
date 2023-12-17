@@ -30,46 +30,49 @@ function btnClickScissor() {
 
 function startGame(humanPick) {
   let computerPick = Math.floor(Math.random() * 3);
-  console.log("Computer pick = " + computerPick);
+  //console.log("Computer pick = " + computerPick);
 
   //If Human picks rock
   if (humanPick === "Rock") {
+    //console.log("In rock");
     if (computerPick == 2) {
       winners.humanWin++;
-      console.log("Human wins");
+      //console.log("Human wins");
     } else if (computerPick == 1) {
       winners.computerWin++;
-      console.log("Computer wins");
+      //console.log("Computer wins");
     } else {
       winners.tie++;
-      console.log("Tie");
+      //console.log("Tie");
     }
   }
 
   //IF Human picks Paper
   else if (humanPick === "Paper") {
+    //console.log("In paper");
     if (computerPick == 0) {
       winners.humanWin++;
-      console.log("Human wins");
+      //console.log("Human wins");
     } else if (computerPick == 2) {
       winners.computerWin++;
-      console.log("Computer wins");
+      //console.log("Computer wins");
     } else {
       winners.tie++;
-      console.log("Tie");
+      //console.log("Tie");
     }
   }
   //IF Human picks Scissor
   else if (humanPick === "Scissor") {
+    //console.log("In Scissor");
     if (computerPick == 1) {
       winners.humanWin++;
-      console.log("Human wins");
+      //console.log("Human wins");
     } else if (computerPick == 0) {
       winners.computerWin++;
-      console.log("Computer wins");
+      //console.log("Computer wins");
     } else {
       winners.tie++;
-      console.log("Tie");
+      //console.log("Tie");
     }
   }
 

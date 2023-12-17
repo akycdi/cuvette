@@ -8,7 +8,6 @@
 .scorcard {
   display: flex;
   align-items: center;
-
   border-color: white;
   border-style: solid;
   border-width: 0.1rem;
@@ -16,7 +15,6 @@
   overflow: hidden;
   width: 50%;
   height: 10rem;
-
   margin-left: 25%;
   margin-top: 3rem;
 }
@@ -41,7 +39,8 @@
   height: 9rem;
 }
 
-.computerContainer {
+.computerContainer,
+.humanContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,30 +57,21 @@
 }
 
 .humanContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  letter-spacing: 1.7px;
-  justify-content: center;
-
-  background-color: white;
-  color: #656565;
-  font-weight: 600;
-  border-radius: 1rem;
-  width: 6rem;
-  flex-basis: 40%;
+  margin-right: -1rem;
 }
 
-#computerScore {
-  margin-top: 1rem;
-  font-size: 4rem;
-  color: black;
-}
-
+#computerScore,
 #humanScore {
   margin-top: 1rem;
   font-size: 4rem;
   color: black;
+}
+
+.triangle-container {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  margin: 50px auto;
 }
 
 .rockBtn,
@@ -90,23 +80,31 @@
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
-  border: 0.8rem solid; /* Outer */
-  background-color: white; /* Inner */
+  border: 0.8rem solid transparent;
+  background-color: transparent;
   font-size: 16px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
 }
 
 .rockBtn {
+  top: 0;
+  left: 0;
   border-color: #0074b6;
-}
-
-.scissorBtn {
-  border-color: #bd00ff;
+  background-color: white;
 }
 
 .paperBtn {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   border-color: #ffa943;
+  background-color: white;
+}
+
+.scissorBtn {
+  top: 0;
+  right: 0;
+  border-color: #bd00ff;
+  background-color: white;
 }
