@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -34,17 +37,19 @@
       </div>
     </div>
 
-    <div class="triangle-container">
-      <button class="rockBtn" onclick="btnClickRock()">
+    <div class="triangle-container" id="triangle-container">
+      <button id="rockBtn" class="rockBtn" onclick="btnClickRock()">
         <img src="./static/RockBtn.svg" alt="" srcset="" />
       </button>
-      <button class="paperBtn" onclick="btnClickPaper()">
+      <button id="paperBtn" class="paperBtn" onclick="btnClickPaper()">
         <img src="./static/PaperBtn.svg" alt="" srcset="" />
       </button>
-      <button class="scissorBtn" onclick="btnClickScissor()">
+      <button id="scissorBtn" class="scissorBtn" onclick="btnClickScissor()">
         <img src="./static/ScissorBtn.svg" alt="" srcset="" />
       </button>
     </div>
+    <div id="result" class="result"></div>
+
     <div id="popup" class="popup">
       <div class="popup-content">
         <button class="close" onclick="closePopup()">X</button>
