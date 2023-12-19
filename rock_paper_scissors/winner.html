@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="stylesheet" href="./CSS/winner.css" />
+    <title>YOU WIN!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cupContainer">
+          <img class="cup" src="./static/winnerPage/cup.svg" alt="" />
+          <img class="stars" src="./static/winnerPage/stars.svg" alt="" />
+      </div>
+
+      <div class="textContainer">
+        <h1>HURRAY!!</h1>
+        <span>YOU WON THE GAME</span>
+      </div>
+
+      <div class="buttonContainer">
+        <button>PLAY AGAIN</button>
+      </div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <button class="close" onclick="closePopup()">X</button>
+          <div class="innerContentPopUp">
+            <span class="gameRulesText">Game Rules</span>
+            <ul class="instructions">
+              <li>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+              </li>
+              <li>
+                Agree ahead of time whether you’ll count off “rock, paper,
+                scissors, shoot” or just “rock, paper, scissors.”
+              </li>
+              <li>
+                Use rock, paper, scissors to settle minor decisions or simply
+                play to pass the time
+              </li>
+              <li>
+                If both players lay down the same hand, each player lays down
+                another hand
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <button class="rulesBtn" id="openPopupBtn" onclick="openPopup()">
+        RULES
+      </button>
+    </div>
+
+    <script src="./JS/winner.js"></script>
+  </body>
+</html>
