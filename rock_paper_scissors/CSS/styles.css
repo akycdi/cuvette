@@ -108,3 +108,71 @@
   border-color: #bd00ff;
   background-color: white;
 }
+
+.rulesBtn {
+  width: 6rem;
+  height: 2rem;
+  letter-spacing: 1.7px;
+  font-size: 1rem;
+  background-color: #8cc461;
+  color: white;
+  border-radius: 0.6rem;
+  border: 2px white solid;
+  float: right;
+  margin-right: 2rem;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(33%);
+  width: 22%;
+  height: 50%;
+  margin-right: 3rem;
+}
+
+.popup-content {
+  padding-top: 1rem;
+  background-color: #004429;
+  width: 100%;
+  height: 100%;
+  border: 0.6rem white solid;
+  border-radius: 1rem;
+
+  color: white;
+}
+
+.close {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border: 0.4rem white solid;
+  background-color: red;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.innerContentPopUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instructions li {
+  margin-bottom: 0.8rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.gameRulesText {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
