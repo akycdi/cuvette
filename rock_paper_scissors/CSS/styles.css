@@ -67,10 +67,11 @@
   color: black;
 }
 
-.triangle-container {
-  position: relative;
-  width: 20rem;
-  height: 20rem;
+.mainContainer {
+  display: flex;
+  position: sticky;
+  width: 22rem;
+  height: 22rem;
   margin: 50px auto;
 }
 
@@ -177,10 +178,21 @@
   letter-spacing: 1px;
 }
 
-.result {
+.humanResultContainer {
   display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around;
-  background-color: red;
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.resultTextContainer {
+  display: flex;
+  font-size: 2rem;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+.computerResultContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
 }

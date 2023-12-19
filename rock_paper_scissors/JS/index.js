@@ -51,16 +51,7 @@ function getWinner(humanPick, computerPick, roundResult) {
     }
   }
 }
-function pageRunner() {
-  if (localStorage.getItem("computerWins")) {
-    winners.humanWin = parseInt(localStorage.getItem("humanWins"));
-    winners.computerWin = parseInt(localStorage.getItem("computerWins"));
-  } else {
-    localStorage.setItem("humanWins", winners.humanWin);
-    localStorage.setItem("computerWins", winners.computerWin);
-  }
-  refreshScore();
-}
+
 function btnClickRock() {
   startGame("ROCK");
 }
@@ -92,31 +83,29 @@ function createImageButton(pick) {
   const image = document.createElement("img");
 
   const styles = {
-    Rock: {
+    ROCK: {
       borderColor: "#0074b6",
       backgroundColor: "white",
     },
-    Paper: {
+    PAPER: {
       borderColor: "#ffa943",
       backgroundColor: "white",
     },
-    Scissor: {
+    SCISSOR: {
       borderColor: "#bd00ff",
       backgroundColor: "white",
     },
   };
 
   const { borderColor, backgroundColor, position } =
-    styles[pick] || styles.Rock;
+    styles[pick] || styles.ROCK;
 
-  button.style.width = "7rem";
-  button.style.height = "7rem";
+  button.style.width = "9rem";
+  button.style.height = "9rem";
   button.style.borderRadius = "50%";
   button.style.border = "0.8rem solid transparent";
   button.style.backgroundColor = "transparent";
-  button.style.fontSize = "16px";
   button.style.cursor = "pointer";
-  button.style.position = "absolute";
 
   button.style.borderColor = borderColor;
   button.style.backgroundColor = backgroundColor;
@@ -129,58 +118,63 @@ function createImageButton(pick) {
 }
 
 function updatedom(roundResult) {
-
-  const traingle = document.getElementById("triangle-container");
-  traingle.style.display= "none";
+  const mainContainer = document.getElementById("mainContainer");
 
   const rockBtn = document.getElementById("rockBtn");
   const paperBtn = document.getElementById("paperBtn");
   const scissorBtn = document.getElementById("scissorBtn");
-  
-  rockBtn.style.display = "none";
-  paperBtn.style.display = "none";
-  scissorBtn.style.display = "none";
+
+  rockBtn.remove();
+  paperBtn.remove();
+  scissorBtn.remove();
+
+  // rockBtn.style.display = "none";
+  // paperBtn.style.display = "none";
+  // scissorBtn.style.display = "none";
+
+  mainContainer.style.display = "flex";
 
   const humanContainer = document.createElement("div");
-  const computerContainer = document.createElement("div");
-
   const humanPickBtn = createImageButton(roundResult.humanPick);
-  const computerPickBtn = createImageButton(roundResult.computerPick);
-
   humanContainer.appendChild(humanPickBtn);
-  computerContainer.appendChild(computerPickBtn);
+  humanContainer.className = "humanResultContainer";
+  mainContainer.append(humanContainer);
 
-  const messageContainer = document.createElement("div");
-  const resultMessage = document.createElement("p");
+  const resultTextContainer = document.createElement("div");
+  const resultMessage = document.createElement("span");
   const actionButton = document.createElement("button");
 
   if (roundResult.winner === "Human") {
-    resultMessage.innerText = "You Won!";
-    actionButton.innerText = "Play Again";
+    resultMessage.innerText = "YOU WIN! AGAINST PC";
+    actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
       window.location.reload();
     });
   } else if (roundResult.winner === "Computer") {
-    resultMessage.innerText = "You Lost!";
-    actionButton.innerText = "Play Again";
+    resultMessage.innerText = " YOU LOST! AGAINST PC";
+    actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
       window.location.reload();
     });
   } else {
-    resultMessage.innerText = "It's a Tie!";
-    actionButton.innerText = "Try Again";
+    resultMessage.innerText = "TIE UP";
+    actionButton.innerText = "REPLY";
     actionButton.addEventListener("click", function () {
       window.location.reload();
     });
   }
-  messageContainer.appendChild(resultMessage);
-  messageContainer.appendChild(actionButton);
 
-  document.getElementById("result").appendChild(humanContainer);
-  document.getElementById("result").appendChild(computerContainer);
-  document.getElementById("result").appendChild(messageContainer);
+  resultTextContainer.appendChild(resultMessage);
+  resultTextContainer.appendChild(actionButton);
+  resultTextContainer.className = "resultTextContainer";
+  mainContainer.append(resultTextContainer);
+
+  const computerContainer = document.createElement("div");
+  computerContainer.className = "computerResultContainer";
+  const computerPickBtn = createImageButton(roundResult.computerPick);
+  computerContainer.appendChild(computerPickBtn);
+  mainContainer.append(computerContainer);
 }
-
 
 function startGame(humanPick) {
   let computerPick = getComputerPick();
@@ -193,5 +187,16 @@ function startGame(humanPick) {
   getWinner(humanPick, computerPick, roundResult);
   updatedom(roundResult);
   updateLocalStorage();
+}
+
+function pageRunner() {
+  if (localStorage.getItem("computerWins")) {
+    winners.humanWin = parseInt(localStorage.getItem("humanWins"));
+    winners.computerWin = parseInt(localStorage.getItem("computerWins"));
+  } else {
+    localStorage.setItem("humanWins", winners.humanWin);
+    localStorage.setItem("computerWins", winners.computerWin);
+  }
+  refreshScore();
 }
 window.onload = pageRunner();
