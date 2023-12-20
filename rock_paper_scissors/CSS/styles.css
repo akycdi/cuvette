@@ -196,3 +196,27 @@
   justify-content: flex-start;
   align-self: center;
 }
+
+.triangle {
+  z-index: -1;
+  width: 14em;
+  height: 14em;
+  border: 1rem solid #334723;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(225deg) skew(10deg, 10deg); /* Adjusted skew */
+  left: 50%;
+  top: 28%;
+  margin-top: -1rem; 
+  border-right: none;
+  border-bottom: none;
+}
+
+.triangle:before {
+  position: absolute;
+  content: "";
+  border-top: 1rem solid #334723;
+  width: calc(1.41 * (14em + 1.4em));
+  transform: rotate(-45deg) skew(-5deg, 0deg); /* Adjusted skew */
+  left: -3.57em;
+  top: 6.565em;
+}
