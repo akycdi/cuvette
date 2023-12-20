@@ -51,7 +51,6 @@ function getWinner(humanPick, computerPick, roundResult) {
     }
   }
 }
-
 function btnClickRock() {
   startGame("ROCK");
 }
@@ -116,49 +115,45 @@ function createImageButton(pick) {
 
   return button;
 }
-
-function updatedom(roundResult) {
-  const mainContainer = document.getElementById("mainContainer");
+function removeElements() {
   const triangle = document.getElementById("triangle");
-
   const rockBtn = document.getElementById("rockBtn");
   const paperBtn = document.getElementById("paperBtn");
   const scissorBtn = document.getElementById("scissorBtn");
-
   rockBtn.remove();
   paperBtn.remove();
   scissorBtn.remove();
-
   triangle.remove();
-
-  // rockBtn.style.display = "none";
-  // paperBtn.style.display = "none";
-  // scissorBtn.style.display = "none";
+}
+function updatedom(roundResult) {
+  const mainContainer = document.getElementById("mainContainer");
+  removeElements();
 
   mainContainer.style.display = "flex";
   mainContainer.style.width = "50rem";
   mainContainer.style.height = "20rem";
   mainContainer.style.marginLeft = "27%";
-  // mainContainer.style.backgroundColor = "red";
 
   const humanContainer = document.createElement("div");
-  const humanPickBtn = createImageButton(roundResult.humanPick);
-  humanContainer.appendChild(humanPickBtn);
-  humanContainer.className = "humanResultContainer";
-  mainContainer.append(humanContainer);
-
+  const computerContainer = document.createElement("div");
   const resultTextContainer = document.createElement("div");
   const resultMessage = document.createElement("span");
-  resultMessage.className = "resultMessage";
-
-  var resultMessageAgainst = document.createElement("span");
-
+  const resultMessageAgainst = document.createElement("span");
   const actionButton = document.createElement("button");
+
+  humanContainer.className = "humanResultContainer";
+  computerContainer.className = "computerResultContainer";
+  resultTextContainer.className = "resultTextContainer";
+  resultMessage.className = "resultMessage";
   actionButton.className = "actionButton";
+
+  const humanPickBtn = createImageButton(roundResult.humanPick);
+  const computerPickBtn = createImageButton(roundResult.computerPick);
 
   if (roundResult.winner === "Human") {
     resultMessage.innerText = "YOU WIN";
     resultMessageAgainst.innerText = "AGAINST PC";
+    humanPickBtn.id = "winner";
 
     actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
@@ -167,6 +162,7 @@ function updatedom(roundResult) {
   } else if (roundResult.winner === "Computer") {
     resultMessage.innerText = " YOU LOST";
     resultMessageAgainst.innerText = "AGAINST PC";
+    computerPickBtn.id = "winner";
 
     actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
@@ -181,16 +177,15 @@ function updatedom(roundResult) {
     });
   }
 
+  humanContainer.appendChild(humanPickBtn);
+  computerContainer.appendChild(computerPickBtn);
+
   resultTextContainer.appendChild(resultMessage);
   resultTextContainer.appendChild(resultMessageAgainst);
   resultTextContainer.appendChild(actionButton);
-  resultTextContainer.className = "resultTextContainer";
-  mainContainer.append(resultTextContainer);
 
-  const computerContainer = document.createElement("div");
-  computerContainer.className = "computerResultContainer";
-  const computerPickBtn = createImageButton(roundResult.computerPick);
-  computerContainer.appendChild(computerPickBtn);
+  mainContainer.append(humanContainer);
+  mainContainer.append(resultTextContainer);
   mainContainer.append(computerContainer);
 }
 

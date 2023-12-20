@@ -243,3 +243,16 @@
   left: -4em;
   top: 7em;
 }
+
+#winner {
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  background: green;
+  animation: pulse 1.5s ease-out infinite;
+}
+@keyframes pulse {
+  100% {
+    box-shadow: 0 0 0 70px green;
+  }
+}
