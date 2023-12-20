@@ -119,6 +119,7 @@ function createImageButton(pick) {
 
 function updatedom(roundResult) {
   const mainContainer = document.getElementById("mainContainer");
+  const triangle = document.getElementById("triangle");
 
   const rockBtn = document.getElementById("rockBtn");
   const paperBtn = document.getElementById("paperBtn");
@@ -127,6 +128,8 @@ function updatedom(roundResult) {
   rockBtn.remove();
   paperBtn.remove();
   scissorBtn.remove();
+
+  triangle.remove();
 
   // rockBtn.style.display = "none";
   // paperBtn.style.display = "none";
