@@ -4,3 +4,7 @@ function openPopup() {
 function closePopup() {
   document.getElementById("popup").style.display = "none";
 }
+
+function playAgainBtn() {
+  window.history.back();
+}

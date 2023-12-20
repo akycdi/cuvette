@@ -148,7 +148,7 @@ function updatedom(roundResult) {
     resultMessage.innerText = "YOU WIN! AGAINST PC";
     actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
-      window.location.reload();
+      window.location.href = "winner.html";
     });
   } else if (roundResult.winner === "Computer") {
     resultMessage.innerText = " YOU LOST! AGAINST PC";
