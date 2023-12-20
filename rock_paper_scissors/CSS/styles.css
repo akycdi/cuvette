@@ -72,7 +72,8 @@
   position: sticky;
   width: 22rem;
   height: 22rem;
-  margin: 50px auto;
+  margin-left: 40%;
+  margin-top: 2%;
 }
 
 .rockBtn,
@@ -180,21 +181,43 @@
 
 .humanResultContainer {
   display: flex;
-  justify-content: flex-end;
-  align-self: flex-end;
+  flex-basis: 35%;
+  justify-content: center;
+  align-items: center;
+}
+
+.computerResultContainer {
+  display: flex;
+  flex-basis: 35%;
+  justify-content: center;
+  align-items: center;
 }
 
 .resultTextContainer {
   display: flex;
-  font-size: 2rem;
-  align-self: center;
+  flex-basis: 20%;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: white;
+  font-weight: 400;
+  margin-top: 4rem;
 }
-.computerResultContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-self: center;
+.resultMessage {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.actionButton {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  width: 10rem;
+  color: #6b6b6b;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .triangle {

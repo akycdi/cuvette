@@ -136,6 +136,10 @@ function updatedom(roundResult) {
   // scissorBtn.style.display = "none";
 
   mainContainer.style.display = "flex";
+  mainContainer.style.width = "50rem";
+  mainContainer.style.height = "20rem";
+  mainContainer.style.marginLeft = "27%";
+  // mainContainer.style.backgroundColor = "red";
 
   const humanContainer = document.createElement("div");
   const humanPickBtn = createImageButton(roundResult.humanPick);
@@ -145,22 +149,32 @@ function updatedom(roundResult) {
 
   const resultTextContainer = document.createElement("div");
   const resultMessage = document.createElement("span");
+  resultMessage.className = "resultMessage";
+
+  var resultMessageAgainst = document.createElement("span");
+
   const actionButton = document.createElement("button");
+  actionButton.className = "actionButton";
 
   if (roundResult.winner === "Human") {
-    resultMessage.innerText = "YOU WIN! AGAINST PC";
+    resultMessage.innerText = "YOU WIN";
+    resultMessageAgainst.innerText = "AGAINST PC";
+
     actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
       window.location.href = "winner.html";
     });
   } else if (roundResult.winner === "Computer") {
-    resultMessage.innerText = " YOU LOST! AGAINST PC";
+    resultMessage.innerText = " YOU LOST";
+    resultMessageAgainst.innerText = "AGAINST PC";
+
     actionButton.innerText = "PLAY AGAIN";
     actionButton.addEventListener("click", function () {
       window.location.reload();
     });
   } else {
     resultMessage.innerText = "TIE UP";
+    resultMessageAgainst.innerText = "";
     actionButton.innerText = "REPLY";
     actionButton.addEventListener("click", function () {
       window.location.reload();
@@ -168,6 +182,7 @@ function updatedom(roundResult) {
   }
 
   resultTextContainer.appendChild(resultMessage);
+  resultTextContainer.appendChild(resultMessageAgainst);
   resultTextContainer.appendChild(actionButton);
   resultTextContainer.className = "resultTextContainer";
   mainContainer.append(resultTextContainer);
